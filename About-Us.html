@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>About Us — Oniversity</title>
+  <link rel="stylesheet" href="../src/css/style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Inter", "Segoe UI", Tahoma, Arial, sans-serif;
+      background: linear-gradient(180deg, #f5f6f7 0%, #e8f2ef 100%);
+      color: #0b0b0b;
+      overflow-x: hidden;
+    }
+
+    header, footer {
+      background: rgba(255,255,255,0.8);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      margin: 20px auto;
+      width: 90%;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      padding: 14px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .logo a {
+      text-decoration: none;
+      color: #1db954; 
+      font-weight: 800;
+      font-size: 28px; 
+    }
+    .logo img { display: none; }
+
+    nav a {
+      text-decoration: none;
+      color: #0b0b0b;
+      font-weight: 600;
+      margin: 0 20px;
+      position: relative;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background: #1db954;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after { width: 100%; }
+    nav a:hover { color: #1db954; }
+
+    .about-section {
+      text-align: center;
+      padding: 100px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .green-circle {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, #1db954 40%, #0fa66b 100%);
+      border-radius: 50%;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.1;
+      animation: pulse 6s infinite ease-in-out;
+      z-index: 0;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: translate(-50%, -50%) scale(1); }
+      50% { transform: translate(-50%, -50%) scale(1.1); }
+    }
+
+    .about-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .about-content h1 {
+      font-size: 42px;
+      font-weight: 900;
+      color: #0b0b0b;
+      margin-bottom: 10px;
+    }
+
+    .about-content p {
+      font-size: 18px;
+      color: #444;
+      max-width: 700px;
+      margin: 0 auto 60px auto;
+      line-height: 1.6;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .team-member {
+      background: rgba(255,255,255,0.9);
+      border-radius: 20px;
+      padding: 30px 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .team-member:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+    }
+
+    .team-member img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 3px solid #1db954;
+      margin-bottom: 15px;
+      object-fit: cover;
+    }
+
+    .team-member h3 {
+      font-size: 20px;
+      color: #0b0b0b;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+   
+    .btn {
+      appearance: none;
+      border: 1px solid #a5d6a7; 
+      color: #388e3c; 
+      background: #fff;
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px; 
+      transition: all 0.3s ease;
+    }
+    .btn:hover {
+      border-color: #388e3c; 
+      background: #f9f9f9;
+    }
+   
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+      padding: 20px;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 768px) {
+      header { flex-direction: column; gap: 10px; padding: 20px; }
+      .logo a { font-size: 24px; }
+      .about-content h1 { font-size: 32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="index.html#home">Oniversity</a>
+    </div>
+    <nav>
+      <a href="index.html#home">Home</a>
+      <a href="index.html#courses-page">Courses</a>
+      <a href="About-Us.html" style="color:#1db954;">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="about-section">
+    <div class="green-circle"></div>
+
+    <div class="about-content">
+      <h1>Meet Our Team</h1>
+      <p>At Oniversity, our mission is to empower learners with accessible, high-quality online education. 
+         Our team brings together creativity, passion, and expertise to help students achieve their goals.</p>
+
+      <div class="team-grid">
+      
+        <div class="team-member">
+          <img src="AboutUs.png.jpg" alt="Shahad Alanazi">
+          <h3>Shahad Alanazi</h3>
+          <p>Founder</p> <a href="About-Me.html" class="btn">View Profile</a>
+        </div>
+        
+        <div class="team-member">
+          <img src="AboutUs.png.jpg" alt="Deema Nasser">
+          <h3>Deema Nasser</h3>
+          <p>Lead Designer</p>
+          <a href="about-me deema.html" class="btn">View Profile</a>
+        </div>
+        
+        <div class="team-member">
+          <img src="AboutUs.png.jpg" alt="Noura">
+          <h3>Noura</h3>
+          <p>Lead Developer</p>
+          <a href="about-me noura.html" class="btn">View Profile</a>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Oniversity — Online Study
+  </footer>
+
+</body>
+</html>

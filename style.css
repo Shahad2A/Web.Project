@@ -1,0 +1,297 @@
+/* ---------------------------------- */
+/* --- C O M P L E T E  C S S --- */
+/* (Cart/Modal styles have been removed) */
+/* ---------------------------------- */
+
+/* 徴 Smooth scroll behavior for anchor links and padding for fixed header */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  /* Main body background retains the original dynamic feel */
+  background: linear-gradient(120deg, #e8f5e9, #e3f2fd);
+  background-size: 200% 200%;
+  animation: gradientShift 10s ease infinite;
+  height: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* --- Keyframes for Main Body Background Gradient --- */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 徴 NEW: Keyframes for Animated Section Background Movement */
+@keyframes sectionGradientShift {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
+
+/* --- Keyframes for Enrollment Confirmation (NO LONGER USED, but harmless) --- */
+@keyframes cartFlash {
+    0% { transform: scale(1); background-color: transparent; }
+    50% { transform: scale(1.1); background-color: #a5d6a7; box-shadow: 0 0 10px #43a047; }
+    100% { transform: scale(1); background-color: transparent; }
+}
+
+.moving-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 110%;
+  height: 110%;
+  background-image: url('your-image.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  transition: transform 0.2s ease-out;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #2e7d32;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+}
+
+.logo img {
+  width: 90px;
+  height: auto;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.logo:hover img {
+  transform: scale(1.05);
+  filter: drop-shadow(0 3px 6px rgba(46,125,50,0.3));
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 0.95rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: #4caf50;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #388e3c;
+  transform: scale(1.05);
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* --- BASKET & MODAL STYLES REMOVED --- */
+
+
+/* --- General Section Styling --- */
+.page-section { 
+    padding: 80px 50px; 
+    text-align: center; 
+    padding-top: 120px; 
+    min-height: 50vh; 
+    background: rgba(255, 255, 255, 0.7); 
+    backdrop-filter: blur(5px); 
+    position: relative; 
+    z-index: 2; 
+    margin-top: 0;
+    transition: background 0.8s ease-in-out, backdrop-filter 0.8s ease-in-out; 
+}
+
+.page-section h2 { 
+    font-size: 2.5rem; 
+    color: #1b1b1b; 
+    margin-bottom: 30px; 
+}
+.page-section h2 span { 
+    color: #43a047; 
+}
+.hero { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    height: 100vh; 
+    text-align: center; 
+    padding: 0 20px; 
+    animation: fadeIn 2s ease forwards; 
+    position: relative; 
+    z-index: 2; 
+}
+.hero h1 { 
+    font-size: 3rem; 
+    color: #1b1b1b; 
+    margin-bottom: 15px; 
+    animation: slideDown 1s ease; 
+}
+.hero h1 span { 
+    color: #43a047; 
+}
+.hero p { 
+    font-size: 1.1rem; 
+    color: #555; 
+    max-width: 650px; 
+    line-height: 1.6; 
+    animation: slideUp 1.4s ease; 
+}
+.btn { 
+    margin-top: 25px; 
+    background: #43a047; 
+    color: #fff; 
+    padding: 10px 25px; 
+    border-radius: 25px; 
+    font-size: 0.95rem; 
+    text-decoration: none; 
+    box-shadow: 0 3px 12px rgba(67, 160, 71, 0.4); 
+    transition: all 0.4s ease; 
+    display: inline-block; 
+    cursor: pointer; 
+}
+.btn:hover { 
+    background: #2e7d32; 
+    transform: translateY(-3px); 
+    box-shadow: 0 5px 18px rgba(46, 125, 50, 0.4); 
+}
+@keyframes fadeIn { 
+    from { opacity: 0; } 
+    to { opacity: 1; } 
+}
+@keyframes slideDown { 
+    0% { opacity: 0; transform: translateY(-40px); } 
+    100% { opacity: 1; transform: translateY(0); } 
+}
+@keyframes slideUp { 
+    0% { opacity: 0; transform: translateY(40px); } 
+    100% { opacity: 1; transform: translateY(0); } 
+}
+
+/* 徴 Courses Section with Animated Gradient */
+.courses { 
+  text-align: center; 
+  padding: 80px 50px; 
+  padding-top: 120px;
+  
+  /* New Animated Background */
+  background: linear-gradient(135deg, #e8f5e9 0%, #d4e8d5 50%, #e8f5e9 100%);
+  background-size: 200% 200%;
+  animation: sectionGradientShift 20s linear infinite alternate; /* Slower, linear movement */
+  backdrop-filter: none;
+}
+
+/* 検 Feature Highlight Background - integrated from inline style */
+#feature-highlight {
+    background: linear-gradient(135deg, #f1f8e9, #ffffff);
+    backdrop-filter: blur(2px);
+}
+
+.courses h2 { font-size: 2.5rem; color: #1b1b1b; margin-bottom: 40px; animation: slideDown 1s ease; }
+.courses h2 span { color: #43a047; }
+.course-container { display: flex; justify-content: center; flex-wrap: wrap; gap: 30px; }
+.course-card { background: #ffffff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); overflow: hidden; width: 300px; text-align: left; transition: transform 0.4s ease, box-shadow 0.4s ease; }
+.course-card:hover { transform: translateY(-8px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); }
+
+/* 泙 CRUCIAL: Styles for the Embedded SVG Images */
+.course-card img {
+    width: 100%; /* Make image span the width of the card */
+    height: 180px; /* Fixed height for consistency */
+    object-fit: contain; /* Ensures the whole stylized icon is visible */
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    padding: 15px; /* Add some padding to keep the SVGs from touching the edges */
+    background-color: #f7f7f7; /* Light background for visibility of icons */
+    border-bottom: 1px solid #eee; /* Maintain divider */
+    transition: transform 0.4s ease; /* Keep hover effect transition */
+}
+.course-card:hover img {
+    transform: scale(1.03);
+}
+
+.course-content { padding: 15px 20px 20px; }
+.course-card h3 { font-size: 1.3rem; color: #2e7d32; padding-bottom: 5px; }
+.course-details { margin-top: 10px; max-height: 0; overflow: hidden; transition: max-height 0.5s ease-in-out; }
+.course-details.active { max-height: 200px; margin-bottom: 10px; }
+.course-details p { font-size: 0.95rem; color: #333; line-height: 1.4; padding-bottom: 10px; }
+.course-card .btn-toggle { background: #66bb6a; margin-top: 0; padding: 8px 20px; font-size: 0.9rem; text-align: center; }
+.course-card .btn-toggle:hover { background: #4caf50; transform: none; box-shadow: 0 3px 12px rgba(67, 160, 71, 0.4); }
+.course-card .btn-enroll { background: #43a047; margin-top: 15px; }
+.course-card .btn-enroll:hover { background: #2e7d32; }
+.feature-container { display: flex; justify-content: center; gap: 40px; margin-top: 30px; flex-wrap: wrap; }
+.feature-box { padding: 30px; border-radius: 12px; background: #fff; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); width: 200px; }
+.feature-box h3 { font-size: 2.5rem; color: #43a047; margin-bottom: 5px; font-weight: 700; }
+.feature-box p { color: #555; font-size: 0.95rem; }
+footer { background: #2e7d32; color: #e8f5e9; padding: 30px 50px 15px; font-size: 0.9rem; position: relative; z-index: 5; }
+.footer-content { display: flex; justify-content: space-between; flex-wrap: wrap; padding-bottom: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+.footer-column { width: 250px; margin-bottom: 20px; }
+.footer-column h4 { font-size: 1.1rem; margin-bottom: 15px; color: #fff; font-weight: 600; }
+.footer-column ul { list-style: none; padding: 0; }
+.footer-column ul li a { color: #e8f5e9; text-decoration: none; line-height: 2; transition: color 0.3s ease; }
+.footer-column ul li a:hover { color: #a5d6a7; }
+.footer-bottom { text-align: center; padding-top: 15px; }
+#back-to-top { display: none; position: fixed; bottom: 30px; right: 30px; z-index: 99; border: none; outline: none; background-color: #43a047; color: white; cursor: pointer; padding: 10px 15px; border-radius: 50%; font-size: 1.5rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); transition: background-color 0.3s, transform 0.3s; }
+#back-to-top:hover { background-color: #2e7d32; transform: scale(1.05); }
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) { 
+    header { padding: 10px 20px; } 
+    .logo img { width: 70px; } 
+    nav ul { gap: 20px; } 
+    .hero h1 { font-size: 2rem; } 
+    .courses, .page-section, footer { padding: 60px 20px; padding-top: 90px; } 
+    .course-card { width: 100%; max-width: 400px; } 
+    .footer-content { flex-direction: column; align-items: center; text-align: center; } 
+    .footer-column { width: 100%; margin-bottom: 20px; } 
+    .feature-box { width: 100%; max-width: 300px; } 
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oniversity</title>
+  
+  <link rel="stylesheet" href="style.css"> 
+  
+</head>
+<body>
+  <div class="moving-bg"></div>
+
+  <header>
+    <a href="#home" class="logo">
+      <img src="logo.png.jpg" alt="Oniversity Logo">
+      Oniversity
+    </a>
+
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#courses-page">Courses</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    
+    </header>
+
+  <section class="hero" id="home">
+    <h1>Level Up Your <span>Learning</span></h1>
+    <p>Join Oniversity and explore modern online courses designed to help you grow your skills, knowledge, and creativity — all at your own pace.</p>
+    <a href="#courses-page" class="btn">View Courses</a>
+  </section>
+
+  <section class="courses page-section" id="courses-page">
+    <h2>Explore Our <span>Courses</span></h2>
+    <div class="course-container">
+
+      <div class="course-card">
+        <img src="Statistics.png" alt="Statistics Icon">
+        <div class="course-content">
+            <h3>Statistics Fundamentals</h3>
+            <div class="course-details" id="details-stat">
+                <p>
+                    Master the essentials of **descriptive and inferential statistics**. Learn to analyze data, interpret distributions, and conduct hypothesis testing for real-world decision-making. 
+                    <br><br>
+                    ✅ **Certified:** Yes<br>
+                    👨‍🏫 **Instructor:** Dr. Evelyn Reed<br>
+                    💲 **Price:** $49.99
+                </p>
+            </div>
+            <a href="javascript:void(0)" class="btn btn-toggle" aria-expanded="false" aria-controls="details-stat">View Details</a>
+            <a href="javascript:void(0)" class="btn btn-enroll" onclick="showEnrollmentMessage('Statistics Fundamentals')">Enroll Now</a>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <img src="Calculus.png" alt="Calculus Icon">
+        <div class="course-content">
+            <h3>Calculus I: Single Variable</h3>
+            <div class="course-details" id="details-math">
+                <p>
+                    A rigorous introduction to **differentiation and integration**. Develop strong analytical problem-solving skills and apply foundational concepts of limits and continuity. 
+                    <br><br>
+                    ✅ **Certified:** Yes<br>
+                    👨‍🏫 **Instructor:** Prof. Alistair Finch<br>
+                    💲 **Price:** $99.99
+                </p>
+            </div>
+            <a href="javascript:void(0)" class="btn btn-toggle" aria-expanded="false" aria-controls="details-math">View Details</a>
+            <a href="javascript:void(0)" class="btn btn-enroll" onclick="showEnrollmentMessage('Calculus I: Single Variable')">Enroll Now</a>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <img src="CHM.png" alt="Chemistry Icon">
+        <div class="course-content">
+            <h3>General Chemistry</h3>
+            <div class="course-details" id="details-chem">
+                <p>
+                    Explore the fascinating world of **chemical principles**, including atomic structure, chemical bonding, reactions, and stoichiometry. Perfect for science majors.
+                    <br><br>
+                    ✅ **Certified:** No<br>
+                    👨‍🏫 **Instructor:** Dr. Simon Hughes<br>
+                    💲 **Price:** $79.99
+                </p>
+            </div>
+            <a href="javascript:void(0)" class="btn btn-toggle" aria-expanded="false" aria-controls="details-chem">View Details</a>
+            <a href="javascript:void(0)" class="btn btn-enroll" onclick="showEnrollmentMessage('General Chemistry')">Enroll Now</a>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <img src="physics.png" alt="Physics Icon">
+        <div class="course-content">
+            <h3>Intro to Classical Physics</h3>
+            <div class="course-details" id="details-phys">
+                <p>
+                    Understand the laws governing **motion, mechanics, energy, and thermodynamics**. Apply mathematical models to solve problems related to forces and fields. 
+                    <br><br>
+                    ✅ **Certified:** Yes<br>
+                    👨‍🏫 **Instructor:** Prof. Lena Sharma<br>
+                    💲 **Price:** $89.99
+                </p>
+            </div>
+            <a href="javascript:void(0)" class="btn btn-toggle" aria-expanded="false" aria-controls="details-phys">View Details</a>
+            <a href="javascript:void(0)" class="btn btn-enroll" onclick="showEnrollmentMessage('Intro to Classical Physics')">Enroll Now</a>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <img src="DataStr.png" alt="Data Structures Icon">
+        <div class="course-content">
+            <h3>Advanced Data Structures</h3>
+            <div class="course-details" id="details-ds">
+                <p>
+                    Learn how data is organized and manipulated efficiently. Cover essential structures like **Trees, Graphs, and Hash Tables**, and analyze algorithm performance (Big O).
+                    <br><br>
+                    ✅ **Certified:** Yes<br>
+                    👨‍🏫 **Instructor:** Anya Kova, M.Sc.<br>
+                    💲 **Price:** $129.99
+                </p>
+            </div>
+            <a href="javascript:void(0)" class="btn btn-toggle" aria-expanded="false" aria-controls="details-ds">View Details</a>
+            <a href="javascript:void(0)" class="btn btn-enroll" onclick="showEnrollmentMessage('Advanced Data Structures')">Enroll Now</a>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <img src="Python.png" alt="Python Icon">
+        <div class="course-content">
+            <h3>Python for Beginners</h3>
+            <div class="course-details" id="details-py">
+                <p>
+                    Start your coding journey with the versatile **Python language**. Learn fundamental programming concepts, control flow, and build your first practical applications.
+                    <br><br>
+                    ✅ **Certified:** No<br>
+                    👨‍🏫 **Instructor:** Jack Olsen<br>
+                    💲 **Price:** $59.99
+                </p>
+            </div>
+            <a href="javascript:void(0)" class="btn btn-toggle" aria-expanded="false" aria-controls="details-py">View Details</a>
+            <a href="javascript:void(0)" class="btn btn-enroll" onclick="showEnrollmentMessage('Python for Beginners')">Enroll Now</a>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <img src="webdesign.png" alt="Web Design Icon">
+        <div class="course-content">
+            <h3>Responsive Web Design (HTML/CSS)</h3>
+            <div class="course-details" id="details-web">
+                <p>
+                    Create beautiful, **responsive, and user-friendly websites** from scratch. Master HTML5 structure, modern CSS techniques, and design principles for any device.
+                    <br><br>
+                    ✅ **Certified:** Yes<br>
+                    👨‍🏫 **Instructor:** Maya Patel<br>
+                    💲 **Price:** $69.99
+                </p>
+            </div>
+            <a href="javascript:void(0)" class="btn btn-toggle" aria-expanded="false" aria-controls="details-web">View Details</a>
+            <a href="javascript:void(0)" class="btn btn-enroll" onclick="showEnrollmentMessage('Responsive Web Design (HTML/CSS)')">Enroll Now</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="page-section" id="about">
+    <h2>About <span>Oniversity</span></h2>
+    <p style="max-width: 800px; margin: 0 auto 20px; color: #333;">
+        We are dedicated to providing high-quality, flexible, and accessible education to students worldwide. 
+        Our platform is built on the belief that learning should be engaging, relevant, and self-paced. 
+        Meet our instructors, read our mission, and learn more about our commitment to your success here.
+    </p>
+    <a href="About-Us.html" class="btn">Our Mission</a>
+  </section>
+  
+  <section class="page-section" id="feature-highlight">
+    <h2>Why Choose <span>Oniversity</span>?</h2>
+    <div class="feature-container">
+        <div class="feature-box">
+            <h3>95%</h3>
+            <p>Course Completion Rate</p>
+        </div>
+        <div class="feature-box">
+            <h3>10k+</h3>
+            <p>Happy Students Globally</p>
+        </div>
+        <div class="feature-box">
+            <h3>Expert Tutors</h3>
+            <p>Instructors from Top Universities</p>
+        </div>
+    </div>
+  </section>
+
+  <section class="page-section" id="contact">
+    <h2>Get In <span>Touch</span></h2>
+    <p style="max-width: 600px; margin: 0 auto 20px; color: #333;">
+        Have questions about courses, enrollment, or technical support? 
+        Fill out our contact form, email us, or call our support line. We're here to help you start your learning journey!
+    </p>
+    <a href="Contactus-mint.html" class="btn">Contact Form</a>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4>Oniversity</h4>
+        <p>Level up your learning. Knowledge on your own terms.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="About-Us.html">About Us</a></li>
+          <li><a href="#courses-page">All Courses</a></li>
+          <li><a href="Contactus-mint.html">Support</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Oniversity. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <button id="back-to-top" title="Go to top">
+    ↑
+  </button>
+  
+  <script src="script.js"></script>
+
+</body>
+</html>
